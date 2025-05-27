@@ -1,0 +1,416 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 11 11
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Comparator:LMV331 U?
+U 1 1 684310BB
+P 4700 4300
+AR Path="/684310BB" Ref="U?"  Part="1" 
+AR Path="/6842FAAA/684310BB" Ref="U?"  Part="1" 
+F 0 "U?" H 5044 4346 50  0000 L CNN
+F 1 "LMV331" H 5044 4255 50  0000 L CNN
+F 2 "" H 4700 4400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv331.pdf" H 4700 4500 50  0001 C CNN
+	1    4700 4300
+	1    0    0    -1  
+$EndComp
+Text Notes 4750 3850 0    50   ~ 0
+Comparator to generate harmonics
+$Comp
+L power:GND #PWR?
+U 1 1 684310C2
+P 4200 4550
+AR Path="/684310C2" Ref="#PWR?"  Part="1" 
+AR Path="/6842FAAA/684310C2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4200 4300 50  0001 C CNN
+F 1 "GND" H 4205 4377 50  0000 C CNN
+F 2 "" H 4200 4550 50  0001 C CNN
+F 3 "" H 4200 4550 50  0001 C CNN
+	1    4200 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 684310C8
+P 4600 4800
+AR Path="/684310C8" Ref="#PWR?"  Part="1" 
+AR Path="/6842FAAA/684310C8" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4600 4550 50  0001 C CNN
+F 1 "GND" H 4605 4627 50  0000 C CNN
+F 2 "" H 4600 4800 50  0001 C CNN
+F 3 "" H 4600 4800 50  0001 C CNN
+	1    4600 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 4800 4600 4750
+Wire Wire Line
+	4200 4550 4200 4400
+Wire Wire Line
+	4200 4400 4400 4400
+$Comp
+L power:+5V #PWR?
+U 1 1 684310D1
+P 4600 3750
+AR Path="/684310D1" Ref="#PWR?"  Part="1" 
+AR Path="/6842FAAA/684310D1" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4600 3600 50  0001 C CNN
+F 1 "+5V" H 4615 3923 50  0000 C CNN
+F 2 "" H 4600 3750 50  0001 C CNN
+F 3 "" H 4600 3750 50  0001 C CNN
+	1    4600 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 4000 4600 3900
+$Comp
+L 00_my_parts:C_0.1U_CERAMIC_0603 C?
+U 1 1 684310DA
+P 5600 4300
+AR Path="/684310DA" Ref="C?"  Part="1" 
+AR Path="/6842FAAA/684310DA" Ref="C?"  Part="1" 
+F 0 "C?" H 5715 4346 50  0000 L CNN
+F 1 "C_0.1U_CERAMIC_0603" H 5715 4255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" V 5450 4300 50  0001 C CNN
+F 3 "" V 5450 4300 50  0001 C CNN
+	1    5600 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3900 5600 3900
+Wire Wire Line
+	5600 3900 5600 4150
+Connection ~ 4600 3900
+Wire Wire Line
+	4600 3900 4600 3750
+Wire Wire Line
+	4600 4750 5600 4750
+Wire Wire Line
+	5600 4750 5600 4450
+Connection ~ 4600 4750
+Wire Wire Line
+	4600 4750 4600 4600
+Text Label 5000 4600 0    50   ~ 0
+50-MHZ-PRE-FILTER
+Text Notes 4400 3300 0    50   ~ 0
+May need an amplifier before this
+Text HLabel 1250 4600 0    50   Input ~ 0
+10MHZ-IN
+Text HLabel 10300 5000 2    50   Output ~ 0
+50MHZ-OUT
+$Comp
+L 00_my_parts:C_10U_CERAMIC_0603 C?
+U 1 1 684348DA
+P 6300 5000
+AR Path="/684348DA" Ref="C?"  Part="1" 
+AR Path="/6832729C/684348DA" Ref="C?"  Part="1" 
+AR Path="/6842FAAA/684348DA" Ref="C?"  Part="1" 
+F 0 "C?" V 6048 5000 50  0000 C CNN
+F 1 "C_10U_CERAMIC_0603" V 6139 5000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" V 6150 5000 50  0001 C CNN
+F 3 "" V 6150 5000 50  0001 C CNN
+F 4 "GRM188R60J106ME84D " H 6300 5000 50  0001 C CNN "MPN"
+	1    6300 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L 00_my_parts:C_10U_CERAMIC_0603 C?
+U 1 1 684348E1
+P 8200 5000
+AR Path="/684348E1" Ref="C?"  Part="1" 
+AR Path="/6832729C/684348E1" Ref="C?"  Part="1" 
+AR Path="/6842FAAA/684348E1" Ref="C?"  Part="1" 
+F 0 "C?" V 7948 5000 50  0000 C CNN
+F 1 "C_10U_CERAMIC_0603" V 8039 5000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" V 8050 5000 50  0001 C CNN
+F 3 "" V 8050 5000 50  0001 C CNN
+F 4 "GRM188R60J106ME84D " H 8200 5000 50  0001 C CNN "MPN"
+	1    8200 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L 00_my_parts:C_10U_CERAMIC_0603 C?
+U 1 1 684348E8
+P 9700 5000
+AR Path="/684348E8" Ref="C?"  Part="1" 
+AR Path="/6832729C/684348E8" Ref="C?"  Part="1" 
+AR Path="/6842FAAA/684348E8" Ref="C?"  Part="1" 
+F 0 "C?" V 9448 5000 50  0000 C CNN
+F 1 "C_10U_CERAMIC_0603" V 9539 5000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" V 9550 5000 50  0001 C CNN
+F 3 "" V 9550 5000 50  0001 C CNN
+F 4 "GRM188R60J106ME84D " H 9700 5000 50  0001 C CNN "MPN"
+	1    9700 5000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9850 5000 10300 5000
+$Comp
+L 00_my_parts:L_47N_10P_0603 L?
+U 1 1 684348F1
+P 7350 5350
+AR Path="/6832729C/684348F1" Ref="L?"  Part="1" 
+AR Path="/6842FAAA/684348F1" Ref="L?"  Part="1" 
+F 0 "L?" V 7454 5438 50  0000 L CNN
+F 1 "L_47N_10P_0603" V 7545 5438 50  0000 L CNN
+F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7250 5600 50  0001 C CNN
+F 3 "" H 7250 5600 50  0001 C CNN
+F 4 "AIML-0603-47NK-T" H 7350 5350 50  0001 C CNN "MPN"
+	1    7350 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L 00_my_parts:L_47N_10P_0603 L?
+U 1 1 684348F8
+P 9350 5350
+AR Path="/6832729C/684348F8" Ref="L?"  Part="1" 
+AR Path="/6842FAAA/684348F8" Ref="L?"  Part="1" 
+F 0 "L?" V 9454 5438 50  0000 L CNN
+F 1 "L_47N_10P_0603" V 9545 5438 50  0000 L CNN
+F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9250 5600 50  0001 C CNN
+F 3 "" H 9250 5600 50  0001 C CNN
+F 4 "AIML-0603-47NK-T" V 9591 5438 50  0001 L CNN "MPN"
+	1    9350 5350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 5000 7050 5000
+$Comp
+L power:GND #PWR?
+U 1 1 684348FF
+P 7050 5900
+AR Path="/6832729C/684348FF" Ref="#PWR?"  Part="1" 
+AR Path="/6842FAAA/684348FF" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7050 5650 50  0001 C CNN
+F 1 "GND" H 7055 5727 50  0000 C CNN
+F 2 "" H 7050 5900 50  0001 C CNN
+F 3 "" H 7050 5900 50  0001 C CNN
+	1    7050 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 68434905
+P 9000 5950
+AR Path="/6832729C/68434905" Ref="#PWR?"  Part="1" 
+AR Path="/6842FAAA/68434905" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9000 5700 50  0001 C CNN
+F 1 "GND" H 9005 5777 50  0000 C CNN
+F 2 "" H 9000 5950 50  0001 C CNN
+F 3 "" H 9000 5950 50  0001 C CNN
+	1    9000 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00_my_parts:C_0.22N_CERAMIC_0603 C?
+U 1 1 6843490D
+P 6150 5500
+AR Path="/6832729C/6843490D" Ref="C?"  Part="1" 
+AR Path="/6842FAAA/6843490D" Ref="C?"  Part="1" 
+F 0 "C?" H 6035 5454 50  0000 R CNN
+F 1 "C_0.22N_CERAMIC_0603" H 6035 5545 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" V 6000 5500 50  0001 C CNN
+F 3 "" V 6000 5500 50  0001 C CNN
+F 4 "06033C221JAT2A" H 6150 5500 50  0001 C CNN "MPN"
+F 5 "https://au.mouser.com/ProductDetail/KYOCERA-AVX/06033C221JAT2A?qs=9m8RHjAONzCIKQYEFBT17g%3D%3D" H 6150 5500 50  0001 C CNN "Source"
+	1    6150 5500
+	-1   0    0    1   
+$EndComp
+$Comp
+L 00_my_parts:C_0.22N_CERAMIC_0603 C?
+U 1 1 68434915
+P 8200 5500
+AR Path="/6832729C/68434915" Ref="C?"  Part="1" 
+AR Path="/6842FAAA/68434915" Ref="C?"  Part="1" 
+F 0 "C?" H 8085 5454 50  0000 R CNN
+F 1 "C_0.22N_CERAMIC_0603" H 8085 5545 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" V 8050 5500 50  0001 C CNN
+F 3 "" V 8050 5500 50  0001 C CNN
+F 4 "https://au.mouser.com/ProductDetail/KYOCERA-AVX/06033C221JAT2A?qs=9m8RHjAONzCIKQYEFBT17g%3D%3D" H 8200 5500 50  0001 C CNN "Source"
+F 5 "06033C221JAT2A" H 8200 5500 50  0001 C CNN "MPN"
+	1    8200 5500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9000 5950 9000 5650
+Connection ~ 9000 5650
+Wire Wire Line
+	9000 5650 9350 5650
+Wire Wire Line
+	9100 5350 9100 5000
+Wire Wire Line
+	9100 5350 9350 5350
+Wire Wire Line
+	9100 5000 9550 5000
+Wire Wire Line
+	7050 5900 7050 5650
+Connection ~ 7050 5650
+Wire Wire Line
+	7050 5650 7350 5650
+Wire Wire Line
+	7050 5350 7050 5000
+Connection ~ 7050 5350
+Wire Wire Line
+	7050 5350 7350 5350
+Wire Wire Line
+	6150 5350 7050 5350
+Wire Wire Line
+	6150 5650 7050 5650
+Wire Wire Line
+	8200 5650 9000 5650
+Wire Wire Line
+	8200 5350 9100 5350
+Connection ~ 9100 5350
+Wire Wire Line
+	8350 5000 9100 5000
+Connection ~ 9100 5000
+Wire Wire Line
+	5000 4300 5000 5000
+$Comp
+L 00_my_parts:C_10U_CERAMIC_0603 C?
+U 1 1 6844C292
+P 3600 4200
+AR Path="/6844C292" Ref="C?"  Part="1" 
+AR Path="/6832729C/6844C292" Ref="C?"  Part="1" 
+AR Path="/6842FAAA/6844C292" Ref="C?"  Part="1" 
+F 0 "C?" V 3348 4200 50  0000 C CNN
+F 1 "C_10U_CERAMIC_0603" V 3439 4200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" V 3450 4200 50  0001 C CNN
+F 3 "" V 3450 4200 50  0001 C CNN
+F 4 "GRM188R60J106ME84D " H 3600 4200 50  0001 C CNN "MPN"
+	1    3600 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L 00_my_parts:C_10U_CERAMIC_0603 C?
+U 1 1 6844C857
+P 1650 4600
+AR Path="/6844C857" Ref="C?"  Part="1" 
+AR Path="/6832729C/6844C857" Ref="C?"  Part="1" 
+AR Path="/6842FAAA/6844C857" Ref="C?"  Part="1" 
+F 0 "C?" V 1398 4600 50  0000 C CNN
+F 1 "C_10U_CERAMIC_0603" V 1489 4600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" V 1500 4600 50  0001 C CNN
+F 3 "" V 1500 4600 50  0001 C CNN
+F 4 "GRM188R60J106ME84D " H 1650 4600 50  0001 C CNN "MPN"
+	1    1650 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 4200 4400 4200
+$Comp
+L Transistor_BJT:BFR92 Q?
+U 1 1 68450248
+P 2650 4600
+AR Path="/68450248" Ref="Q?"  Part="1" 
+AR Path="/683FE414/68450248" Ref="Q?"  Part="1" 
+F 0 "Q?" H 2840 4646 50  0000 L CNN
+F 1 "BFR92" H 2840 4555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 2850 4525 50  0001 L CIN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BFR92A_N.pdf" H 2650 4600 50  0001 L CNN
+	1    2650 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6845024F
+P 2750 3050
+AR Path="/6845024F" Ref="#PWR?"  Part="1" 
+AR Path="/683FE414/6845024F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2750 2900 50  0001 C CNN
+F 1 "+5V" H 2765 3223 50  0000 C CNN
+F 2 "" H 2750 3050 50  0001 C CNN
+F 3 "" H 2750 3050 50  0001 C CNN
+	1    2750 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 68450255
+P 2750 5050
+AR Path="/68450255" Ref="#PWR?"  Part="1" 
+AR Path="/683FE414/68450255" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2750 4800 50  0001 C CNN
+F 1 "GND" H 2755 4877 50  0000 C CNN
+F 2 "" H 2750 5050 50  0001 C CNN
+F 3 "" H 2750 5050 50  0001 C CNN
+	1    2750 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 5050 2750 4800
+$Comp
+L 00_my_parts:L_10U_20P_0603 L?
+U 1 1 6845025E
+P 2750 3150
+AR Path="/6845025E" Ref="L?"  Part="1" 
+AR Path="/683FE414/6845025E" Ref="L?"  Part="1" 
+F 0 "L?" V 2854 3238 50  0000 L CNN
+F 1 "L_10U_20P_0603" V 2945 3238 50  0000 L CNN
+F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2650 3400 50  0001 C CNN
+F 3 "" H 2650 3400 50  0001 C CNN
+F 4 "MCL1608V1-100-R " V 2991 3238 50  0001 L CNN "MPN"
+F 5 "https://au.mouser.com/ProductDetail/Eaton-Electronics/MCL1608V1-100-R?qs=sGAEpiMZZMv126LJFLh8y1JUKCiE5qBOwv7O47KW5rY%3D" H 2750 3150 50  0001 C CNN "Source"
+	1    2750 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L 00_my_parts:R_100_1P_0603 R?
+U 1 1 68450264
+P 2200 4600
+AR Path="/68450264" Ref="R?"  Part="1" 
+AR Path="/683FE414/68450264" Ref="R?"  Part="1" 
+AR Path="/6842FAAA/68450264" Ref="R?"  Part="1" 
+F 0 "R?" H 2270 4646 50  0000 L CNN
+F 1 "R_100_1P_0603" H 2270 4555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2200 4600 50  0001 C CNN
+F 3 "" H 2200 4600 50  0001 C CNN
+	1    2200 4600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2750 3150 2750 3050
+Wire Wire Line
+	8050 5000 7050 5000
+Connection ~ 7050 5000
+Wire Wire Line
+	6150 5000 5000 5000
+$Comp
+L 00_my_parts:R_10K_1P_0603 R?
+U 1 1 68459CBD
+P 2750 3800
+F 0 "R?" H 2820 3846 50  0000 L CNN
+F 1 "R_10K_1P_0603" H 2820 3755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2850 3800 50  0001 C CNN
+F 3 "" V 2850 3800 50  0001 C CNN
+	1    2750 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 3650 2750 3450
+Wire Wire Line
+	2350 4600 2450 4600
+Wire Wire Line
+	1800 4600 2050 4600
+Wire Wire Line
+	2750 3950 2750 4200
+Wire Wire Line
+	3450 4200 2750 4200
+Connection ~ 2750 4200
+Wire Wire Line
+	2750 4200 2750 4400
+Wire Wire Line
+	1250 4600 1500 4600
+$EndSCHEMATC
